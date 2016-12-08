@@ -1,0 +1,30 @@
+﻿@model List<dictionary.Models.DictionaryModels>
+
+@{
+    ViewBag.Title = "ViewDictList";
+}
+
+<h2>Słownik główny</h2>
+
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>ENG</th>
+            <th>POL</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.EngItem</td>
+                <td>@item.PolItem</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
