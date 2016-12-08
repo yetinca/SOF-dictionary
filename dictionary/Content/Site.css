@@ -9,8 +9,8 @@
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
 */
 .dl-horizontal dt {
     white-space: normal;
@@ -23,23 +23,23 @@ textarea {
     max-width: 280px;
 }
 
-.navbar {
-    color: beige;
+.navbar-moje {
+    color: silver;
     font-family: sans-serif;
-    background-color: darkolivegreen;
-    navbutton_background_color: darkolivegreen;
+    background-color: dimgray;
+
 }
 
-.navbar-header {
+/*.navbar-header {
     color: beige;
     font-family: sans-serif;
-    background-color: darkolivegreen;
-    navbutton_background_color: darkolivegreen;
+    background-color: dimgray;
+    navbutton_background_color: silver;
 }
 
 .navbar-collapse {
     color: beige;
     font-family: sans-serif;
-    background-color: darkolivegreen;
-    navbutton_background_color: darkolivegreen;
-}
+    background-color: dimgray;
+    navbutton_background_color: silver;
+}*/
