@@ -205,12 +205,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="DBModels\BranchDictionaryDBmodel.cs" />
     <Compile Include="DBModels\MainDictionaryDBmodel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Methods\BranchMethod.cs" />
     <Compile Include="Methods\MainMethod.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DictionaryBranchModels.cs" />
     <Compile Include="Models\DictionaryModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />

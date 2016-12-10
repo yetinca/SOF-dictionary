@@ -7,52 +7,28 @@ namespace dictionary.Models
 {
     public class DictionaryModels
     {
-        public int  ID { get; set; }
-
+        public int ID { get; set; }
         public string EngItem { get; set; }
-
-	    public string PolItem { get; set; }
-
-
-	//[PartOfSpeach]
- //       [int] NULL,
-	//[LastModification]
- //       [datetime2](7) NULL,
-	//[FirstInput]
- //       [datetime2](7) NULL,
-	//[Abbreviation]
- //       [nchar](5) NULL,
-	//[Branch]
- //       [int] NULL,
-	//[TermType]
- //       [int] NULL,
-	//[PolItemDef]
- //       [nvarchar](max) NULL,
-	//[EngItemDef]
- //       [nvarchar](max) NULL,
-	//[Synonyms]
- //       [int] NULL,
-	//[Antonyms]
- //       [int] NULL,
-	//[TermSuperior]
- //       [int] NULL,
-	//[TermInferior]
- //       [int] NULL,
-	//[TermAssociated]
- //       [int] NULL,
-	//[FalseFriendPL]
- //       [int] NULL,
-	//[FalseFriendANG]
- //       [int] NULL,
-	//[Image]
- //       [int] NULL,
-	//[Colocations]
- //       [int] NULL,
-	//[Examples]
- //       [nvarchar](max) NULL,
-	//[Occurence]
- //       [int] NULL,
-	//[AdditionalInfo]
- //       [nvarchar](max) NULL
+        public string PolItem { get; set; }
+        public int? PartOfSpeach { get; set; }
+        public DateTime? FirstInput { get; set; }
+        public DateTime? LastModification { get; set; }
+        public string Abbreviation { get; set; }
+        public int? Branch { get; set; }
+        public int? TermType { get; set; }
+        public string PolItemDef { get; set; }
+        public string EngItemDef { get; set; }
+        public int? Synonyms { get; set; }
+        public int? Antonyms { get; set; }
+        public int? TermSuperior { get; set; }
+        public int? TermInferior { get; set; }
+        public int? TermAssociated { get; set; }
+        public int? FalseFriendPL { get; set; }
+        public int? FalseFriendANG { get; set; }
+        public int? Image { get; set; }
+        public int? Colocations { get; set; }
+        public string Examples { get; set; }
+        public int? Occurence { get; set; }
+        public string AdditionalInfo { get; set; }
     }
 }

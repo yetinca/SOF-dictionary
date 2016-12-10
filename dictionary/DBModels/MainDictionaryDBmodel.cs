@@ -37,4 +37,6 @@ namespace dictionary.DBModels
         public string AdditionalInfo { get; set; }
 
     }
+
+  
 }

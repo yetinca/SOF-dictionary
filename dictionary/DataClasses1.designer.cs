@@ -30,10 +30,13 @@ namespace dictionary
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void Insertnadzór(nadzór instance);
+    partial void Updatenadzór(nadzór instance);
+    partial void Deletenadzór(nadzór instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["DictionaryCS"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -67,6 +70,30 @@ namespace dictionary
 			get
 			{
 				return this.GetTable<main>();
+			}
+		}
+		
+		public System.Data.Linq.Table<rodzaj> rodzajs
+		{
+			get
+			{
+				return this.GetTable<rodzaj>();
+			}
+		}
+		
+		public System.Data.Linq.Table<czesci_mowy> czesci_mowies
+		{
+			get
+			{
+				return this.GetTable<czesci_mowy>();
+			}
+		}
+		
+		public System.Data.Linq.Table<nadzór> nadzórs
+		{
+			get
+			{
+				return this.GetTable<nadzór>();
 			}
 		}
 	}
@@ -490,6 +517,284 @@ namespace dictionary
 				{
 					this._AdditionalInfo = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.rodzaj")]
+	public partial class rodzaj
+	{
+		
+		private int _ID;
+		
+		private string _rodzaj1;
+		
+		public rodzaj()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="rodzaj", Storage="_rodzaj1", DbType="NVarChar(255)")]
+		public string rodzaj1
+		{
+			get
+			{
+				return this._rodzaj1;
+			}
+			set
+			{
+				if ((this._rodzaj1 != value))
+				{
+					this._rodzaj1 = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.czesci_mowy")]
+	public partial class czesci_mowy
+	{
+		
+		private int _Identyfikator;
+		
+		private string _skrot;
+		
+		private string _pelna;
+		
+		private string _dodatek;
+		
+		private string _skrot_en;
+		
+		public czesci_mowy()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Identyfikator", DbType="Int NOT NULL")]
+		public int Identyfikator
+		{
+			get
+			{
+				return this._Identyfikator;
+			}
+			set
+			{
+				if ((this._Identyfikator != value))
+				{
+					this._Identyfikator = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_skrot", DbType="NVarChar(255)")]
+		public string skrot
+		{
+			get
+			{
+				return this._skrot;
+			}
+			set
+			{
+				if ((this._skrot != value))
+				{
+					this._skrot = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pelna", DbType="NVarChar(255)")]
+		public string pelna
+		{
+			get
+			{
+				return this._pelna;
+			}
+			set
+			{
+				if ((this._pelna != value))
+				{
+					this._pelna = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dodatek", DbType="NVarChar(255)")]
+		public string dodatek
+		{
+			get
+			{
+				return this._dodatek;
+			}
+			set
+			{
+				if ((this._dodatek != value))
+				{
+					this._dodatek = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_skrot_en", DbType="NVarChar(255)")]
+		public string skrot_en
+		{
+			get
+			{
+				return this._skrot_en;
+			}
+			set
+			{
+				if ((this._skrot_en != value))
+				{
+					this._skrot_en = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.nadzór")]
+	public partial class nadzór : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID;
+		
+		private string _user;
+		
+		private System.Nullable<int> _RecID;
+		
+		private string _Politem;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnuserChanging(string value);
+    partial void OnuserChanged();
+    partial void OnRecIDChanging(System.Nullable<int> value);
+    partial void OnRecIDChanged();
+    partial void OnPolitemChanging(string value);
+    partial void OnPolitemChanged();
+    #endregion
+		
+		public nadzór()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this.OnIDChanging(value);
+					this.SendPropertyChanging();
+					this._ID = value;
+					this.SendPropertyChanged("ID");
+					this.OnIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[user]", Storage="_user", DbType="NVarChar(50)")]
+		public string user
+		{
+			get
+			{
+				return this._user;
+			}
+			set
+			{
+				if ((this._user != value))
+				{
+					this.OnuserChanging(value);
+					this.SendPropertyChanging();
+					this._user = value;
+					this.SendPropertyChanged("user");
+					this.OnuserChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecID", DbType="Int")]
+		public System.Nullable<int> RecID
+		{
+			get
+			{
+				return this._RecID;
+			}
+			set
+			{
+				if ((this._RecID != value))
+				{
+					this.OnRecIDChanging(value);
+					this.SendPropertyChanging();
+					this._RecID = value;
+					this.SendPropertyChanged("RecID");
+					this.OnRecIDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Politem", DbType="NVarChar(50)")]
+		public string Politem
+		{
+			get
+			{
+				return this._Politem;
+			}
+			set
+			{
+				if ((this._Politem != value))
+				{
+					this.OnPolitemChanging(value);
+					this.SendPropertyChanging();
+					this._Politem = value;
+					this.SendPropertyChanged("Politem");
+					this.OnPolitemChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}
