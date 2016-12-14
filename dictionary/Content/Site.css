@@ -29,17 +29,23 @@ textarea {
     background-color: dimgray;
 
 }
-
-/*.navbar-header {
-    color: beige;
-    font-family: sans-serif;
-    background-color: dimgray;
-    navbutton_background_color: silver;
+body{
+background-color: black;
+color: #bababa;
 }
 
-.navbar-collapse {
-    color: beige;
-    font-family: sans-serif;
-    background-color: dimgray;
-    navbutton_background_color: silver;
-}*/
+.form-control{
+	background-color: #424242;
+	color: #ffffff;
+	font-family:"Courier new"  ;
+}
+.form-control:focus{
+	background-color: #737070;
+	color: #ffffff;
+	border-color: #fcfcfc;
+}
+.notka{
+  height: 80px;
+  background-color: #444f3a !important;
+}
+
