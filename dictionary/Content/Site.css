@@ -2,7 +2,10 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
+@font-face {
+    font-family: 'SilveryTarjey';
+    src: url('../fonts/SilveryTarjey.ttf') format('truetype');
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -25,10 +28,11 @@ textarea {
 
 .navbar-moje {
     color: silver;
-    font-family: sans-serif;
+    font-family: 'SilveryTarjey',monospace ;
     background-color: dimgray;
 
 }
+
 body{
 background-color: black;
 color: #bababa;
@@ -48,4 +52,39 @@ color: #bababa;
   height: 80px;
   background-color: #444f3a !important;
 }
+.krokodyl {
+    color: #444f3a;
+}
+table {
+        width: 100%;
+    }
 
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 120px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    width: 19.2%;
+    float: left;
+}
