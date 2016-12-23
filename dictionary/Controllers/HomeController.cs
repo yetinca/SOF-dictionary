@@ -26,5 +26,11 @@ namespace dictionary.Controllers
 
             return View();
         }
+
+        public ActionResult Diagram()
+        {
+            ViewBag.Message = "Your contact page.";
+            return View();
+        }
     }
 }
