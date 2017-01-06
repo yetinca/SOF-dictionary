@@ -272,6 +272,13 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="fonts\SilveryTarjey.ttf" />
+    <Content Include="fonts\SilveryTarjey.otf" />
+    <Content Include="fonts\GOODTIME.ttf" />
+    <Content Include="fonts\avocado_.ttf" />
+    <Content Include="fonts\Arvo-Bold.ttf" />
+    <Content Include="fonts\Arvo-BoldItalic.ttf" />
+    <Content Include="fonts\Arvo-Italic.ttf" />
+    <Content Include="fonts\Arvo-Regular.ttf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

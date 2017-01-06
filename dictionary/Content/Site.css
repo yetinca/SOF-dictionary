@@ -5,7 +5,17 @@
 @font-face {
     font-family: 'SilveryTarjey';
     src: url('../fonts/SilveryTarjey.ttf') format('truetype');
+    src: url('../fonts/SilveryTarjey.ttf') format('opentype');
 }
+@font-face {
+    font-family: 'GOODTIME';
+    src: url('../fonts/GOODTIME.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'avocado_';
+    src: url('../fonts/avocado_.ttf') format('truetype');
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -27,14 +37,17 @@ textarea {
 }
 
 .navbar-moje {
-    color: silver;
-    font-family: 'SilveryTarjey',monospace ;
-    background-color: dimgray;
+    color: #DBDBDB;
+    font-family: "Arvo",serif ;
+    font-size: 20px;
+    background-color: #2B2B2B;
 
 }
-
+a{
+    color: #F3F3f3 !important;
+}
 body{
-background-color: black;
+background-color: #171717;
 color: #bababa;
 }
 
@@ -48,43 +61,13 @@ color: #bababa;
 	color: #ffffff;
 	border-color: #fcfcfc;
 }
+.krokodyl {
+    color: #444f3a;
+}
 .notka{
   height: 80px;
   background-color: #444f3a !important;
 }
-.krokodyl {
-    color: #444f3a;
-}
-table {
-        width: 100%;
-    }
-
-thead, tbody, tr, td, th { display: block; }
-
-tr:after {
-    content: ' ';
-    display: block;
-    visibility: hidden;
-    clear: both;
-}
-
-thead th {
-    height: 30px;
-
-    /*text-align: left;*/
-}
-
-tbody {
-    height: 120px;
-    overflow-y: auto;
-}
-
-thead {
-    /* fallback */
-}
-
-
-tbody td, thead th {
-    width: 19.2%;
-    float: left;
+.table-hover > tbody > tr.active:hover > th {
+    background-color: #626262 !important;
 }

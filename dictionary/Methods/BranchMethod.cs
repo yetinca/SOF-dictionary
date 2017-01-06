@@ -10,9 +10,8 @@ namespace dictionary.Methods
 {
     public class BranchMethod
     {
-        public class Branch
-        {
             static ApplicationDbContext db = new ApplicationDbContext();
+
             public static List<DictionaryBranchModels> GetBranch()
             {
                 var model = db.Rodzaj.Select(x => new DictionaryBranchModels
@@ -20,8 +19,8 @@ namespace dictionary.Methods
                     ID = x.ID,
                     rodzaj = x.rodzaj1
                 }).ToList();
+                Console.WriteLine(model.ToString());
             return (model);
             }
         }
     }
-}

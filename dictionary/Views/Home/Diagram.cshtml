@@ -1,9 +1,27 @@
-﻿
+﻿@model List<dictionary.Models.DictionaryBranchModels>
 @{
     ViewBag.Title = "Diagram";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Diagram</h2>
-<div id="lista"></div>
+<div class="container">
+    <table class="table table-hover table-bordered ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>rodzaj</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.rodzaj</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 

@@ -1,13 +1,19 @@
-﻿using System;
+﻿using dictionary.Methods;
+using dictionary.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
 namespace dictionary.Controllers
+
 {
+
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         public ActionResult Index()
         {
             return View();
@@ -29,8 +35,8 @@ namespace dictionary.Controllers
 
         public ActionResult Diagram()
         {
-            ViewBag.Message = "Your contact page.";
-            return View();
+            var model = BranchMethod.GetBranch();
+            return View(model);
         }
     }
 }
