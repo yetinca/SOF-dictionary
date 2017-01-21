@@ -17,7 +17,7 @@ namespace dictionary.Methods
                 var model = db.Rodzaj.Select(x => new DictionaryBranchModels
                 {
                     ID = x.ID,
-                    rodzaj = x.rodzaj1
+                    rodzaj = x.branch
                 }).ToList();
                 Console.WriteLine(model.ToString());
             return (model);

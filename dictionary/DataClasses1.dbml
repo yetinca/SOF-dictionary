@@ -27,12 +27,6 @@
       <Column Name="AdditionalInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.rodzaj" Member="rodzajs">
-    <Type Name="rodzaj">
-      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="rodzaj" Member="rodzaj1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.czesci_mowy" Member="czesci_mowies">
     <Type Name="czesci_mowy">
       <Column Name="Identyfikator" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -48,6 +42,12 @@
       <Column Name="[user]" Member="user" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="RecID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Politem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rodzaj" Member="rodzaj">
+    <Type Name="rodzaj">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="branch" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

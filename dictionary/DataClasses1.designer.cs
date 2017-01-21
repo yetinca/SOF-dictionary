@@ -73,14 +73,6 @@ namespace dictionary
 			}
 		}
 		
-		public System.Data.Linq.Table<rodzaj> rodzajs
-		{
-			get
-			{
-				return this.GetTable<rodzaj>();
-			}
-		}
-		
 		public System.Data.Linq.Table<czesci_mowy> czesci_mowies
 		{
 			get
@@ -94,6 +86,14 @@ namespace dictionary
 			get
 			{
 				return this.GetTable<nadzór>();
+			}
+		}
+		
+		public System.Data.Linq.Table<rodzaj> rodzaj
+		{
+			get
+			{
+				return this.GetTable<rodzaj>();
 			}
 		}
 	}
@@ -521,51 +521,6 @@ namespace dictionary
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.rodzaj")]
-	public partial class rodzaj
-	{
-		
-		private int _ID;
-		
-		private string _rodzaj1;
-		
-		public rodzaj()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
-		public int ID
-		{
-			get
-			{
-				return this._ID;
-			}
-			set
-			{
-				if ((this._ID != value))
-				{
-					this._ID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="rodzaj", Storage="_rodzaj1", DbType="NVarChar(255)")]
-		public string rodzaj1
-		{
-			get
-			{
-				return this._rodzaj1;
-			}
-			set
-			{
-				if ((this._rodzaj1 != value))
-				{
-					this._rodzaj1 = value;
-				}
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.czesci_mowy")]
 	public partial class czesci_mowy
 	{
@@ -795,6 +750,51 @@ namespace dictionary
 			if ((this.PropertyChanged != null))
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.rodzaj")]
+	public partial class rodzaj
+	{
+		
+		private int _ID;
+		
+		private string _branch;
+		
+		public rodzaj()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
+		public int ID
+		{
+			get
+			{
+				return this._ID;
+			}
+			set
+			{
+				if ((this._ID != value))
+				{
+					this._ID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_branch", DbType="NVarChar(255)")]
+		public string branch
+		{
+			get
+			{
+				return this._branch;
+			}
+			set
+			{
+				if ((this._branch != value))
+				{
+					this._branch = value;
+				}
 			}
 		}
 	}
