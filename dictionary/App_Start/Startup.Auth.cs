@@ -6,6 +6,8 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using dictionary.Models;
+using AutoMapper;
+using dictionary.DBModels;
 
 namespace dictionary
 {
@@ -29,12 +31,12 @@ namespace dictionary
                 Provider = new CookieAuthenticationProvider
                 {
                     // Enables the application to validate the security stamp when the user logs in.
-                    // This is a security feature which is used when you change a password or add an external login to your account.  
+                    // This is a security feature which is used when you change a password or add an external login to your account.
                     OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<ApplicationUserManager, ApplicationUser>(
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            });            
+            });
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Enables the application to temporarily store user information when they are verifying the second factor in the two-factor authentication process.
@@ -44,6 +46,8 @@ namespace dictionary
             // Once you check this option, your second step of verification during the login process will be remembered on the device where you logged in from.
             // This is similar to the RememberMe option when you log in.
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
+
+            MapperInitialize();
 
             // Uncomment the following lines to enable logging in with third party login providers
             //app.UseMicrosoftAccountAuthentication(
@@ -63,6 +67,16 @@ namespace dictionary
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+        }
+
+        static void MapperInitialize()
+        {
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<Main, DictionaryModels>().ForMember(m => m.Branch, mapper => mapper.MapFrom(b => b.Branch.branch))
+                                                       .ForMember(m => m.PartOfSpeachStr, mapper => mapper.MapFrom(b => b.PartOfSpeach.skrot));
+                cfg.CreateMap<Branch, DictionaryBranchModels>().ForMember(m => m.rodzaj, mapper => mapper.MapFrom(b => b.branch));
+            });
         }
     }
 }

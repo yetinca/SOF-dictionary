@@ -7,6 +7,7 @@ using System.Web;
 
 namespace dictionary.DBModels
 {
+    //klasa serwerowa
     [Table("main")]
     public class Main
     {
@@ -15,11 +16,13 @@ namespace dictionary.DBModels
         public int ID { get; set; }
         public string EngItem { get; set; }
         public string PolItem { get; set; }
-        public int? PartOfSpeach { get; set; }
+        public int? PartOfSpeachID { get; set; }
+        public virtual PartOfSpeach PartOfSpeach { get; set; }
         public DateTime? LastModification { get; set; }
         public DateTime? FirstInput { get; set; }
         public string Abbreviation { get; set; }
-        public int? Branch { get; set; }
+        public int? BranchID { get; set; }
+        public virtual Branch Branch { get; set; }
         public int? TermType { get; set; }
         public string PolItemDef { get; set; }
         public string EngItemDef { get; set; }
@@ -37,6 +40,4 @@ namespace dictionary.DBModels
         public string AdditionalInfo { get; set; }
 
     }
-
-  
 }

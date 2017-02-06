@@ -7,12 +7,15 @@ using System.Web;
 
 namespace dictionary.DBModels
 {
-    [Table("rodzaj")]
-    public class Branch
+    [Table("czesci_mowy")]
+    public class PartOfSpeach
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        public string branch { get; set; }
+        public string skrot { get; set; }
+        public string pelna { get; set; }
+        public string dodatek { get; set; }
+        public string skrot_en { get; set; }
     }
 }

@@ -14,6 +14,12 @@ namespace dictionary.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        public ActionResult ViewDictList()
+        {
+            var model = MainMethod.GetDictionary();
+            return View(model);
+        }
+
         public ActionResult Index()
         {
             return View();
