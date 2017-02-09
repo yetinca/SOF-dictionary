@@ -5422,8 +5422,8 @@
 			divFooterInner[0].style[padding] = bScrolling ? barWidth+"px" : "0px";
 		}
 	
-		// Correct DOM ordering for colgroup - comes before the thead
-		table.children('colgroup').insertBefore( table.children('thead') );
+		// Correct DOM ordering for comdroup - comes before the thead
+		table.children('comdroup').insertBefore( table.children('thead') );
 	
 		/* Adjust the position of the header in case we loose the y-scrollbar */
 		divBody.scroll();
@@ -5909,7 +5909,7 @@
 		for ( i=0, ien=aSort.length ; i<ien ; i++ ) {
 			sortCol = aSort[i];
 	
-			// Track if we can use the fast sort algorithm
+			// Track if we can use the fast sort amdorithm
 			if ( sortCol.formatter ) {
 				formatters++;
 			}

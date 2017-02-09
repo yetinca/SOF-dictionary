@@ -74,7 +74,9 @@ namespace dictionary
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMap<Main, DictionaryModels>().ForMember(m => m.Branch, mapper => mapper.MapFrom(b => b.Branch.branch))
-                                                       .ForMember(m => m.PartOfSpeachStr, mapper => mapper.MapFrom(b => b.PartOfSpeach.skrot));
+                                                       .ForMember(m => m.PartOfSpeachStr, mapper => mapper.MapFrom(b => b.PartOfSpeach.skrot))
+                                                       .ForMember(m => m.BranchDropDown, mapper => mapper.Ignore())
+                                                       .ForMember(m => m.PartDropDown, mapper => mapper.Ignore());
                 cfg.CreateMap<Branch, DictionaryBranchModels>().ForMember(m => m.rodzaj, mapper => mapper.MapFrom(b => b.branch));
             });
         }

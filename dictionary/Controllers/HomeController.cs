@@ -1,4 +1,5 @@
-﻿using dictionary.Methods;
+﻿using dictionary.DBModels;
+using dictionary.Methods;
 using dictionary.Models;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,32 @@ namespace dictionary.Controllers
         public ActionResult ViewDictList()
         {
             var model = MainMethod.GetDictionary();
+            return View(model);
+        }
+
+        public ActionResult CreateNewDict()
+        {
+            return View(new DictionaryModels());
+        }
+
+        [HttpPost]
+        public ActionResult CreateNewDict(DictionaryModels model)
+        {
+            if (ModelState.IsValid)
+            {
+                var newModel = new Main();
+
+                newModel.EngItem = model.EngItem;
+                newModel.FirstInput = model.FirstInput;
+                newModel.BranchID = model.BranchID;
+
+                db.Main.Add(newModel);
+
+                db.SaveChanges();
+
+                return RedirectToAction(nameof(ViewDictList));
+            }
+
             return View(model);
         }
 

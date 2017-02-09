@@ -1,0 +1,80 @@
+﻿@model dictionary.Models.DictionaryModels
+
+<h1>Tworzenie nowego hasła</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container">
+        <div class="form-group ">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            @Html.LabelFor(m => m.EngItem)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(m => m.EngItem)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row date">
+                        <div class="col-md-3">
+                            @Html.LabelFor(m => m.FirstInput)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(m => m.FirstInput, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3" align="left" )>
+                    <div class="row date">
+                        <div class="col-md-3">
+                            @Html.LabelFor(m => m.BranchID)
+                        </div>
+                        <div class="col-md-3">
+                            @Html.DropDownListFor(m => m.BranchID, Model.BranchDropDown, new { @class = "selectpicker" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p></p>
+                <div class="col-md-4 col-md-offset-11" align="left" )>
+                    <button class="btn" type="submit">Zapisz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+
+@section scripts{
+    <script>
+        $('#FirstInput').datepicker({
+            format: "dd-mm-yyyy",
+            weekStart: 1,
+            todayBtn: "linked",
+            language: "pl",
+            calendarWeeks: true,
+            autoclose: true,
+            todayHighlight: true,
+            datesDisabled: ['02/06/2017', '02/21/2017']
+        });
+    </script>
+
+    <script>
+        $('.BranchID').selectpicker({
+            style: 'btn-info',
+            size: 4
+        });
+
+    </script>
+}

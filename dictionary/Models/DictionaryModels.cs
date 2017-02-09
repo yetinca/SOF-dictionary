@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -9,6 +10,9 @@ namespace dictionary.Models
     public class DictionaryModels
     {
         public int ID { get; set; }
+        //Data annotations
+        [Display(Name = "Termin angielski")]
+        [StringLength(maximumLength: 50, ErrorMessage = "zbyt długi wpis")]
         public string EngItem { get; set; }
         public string PolItem { get; set; }
         public int? PartOfSpeachID { get; set; }
@@ -17,6 +21,7 @@ namespace dictionary.Models
         public DateTime? FirstInput { get; set; }
         public DateTime? LastModification { get; set; }
         public string Abbreviation { get; set; }
+        public int? BranchID { get; set; }
         public string Branch { get; set; }
         public List<SelectListItem> BranchDropDown { get; set; } = GetBranchDropDown();
         public int? TermType { get; set; }

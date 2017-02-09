@@ -23,14 +23,19 @@ namespace dictionary
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js",
                        "~/Scripts/DataTables/jquery.dataTables.js",
-                       "~/Scripts/DataTables/dataTables.bootstrap.js"
-                     
+                       "~/Scripts/DataTables/dataTables.bootstrap.js",
+                       "~/Scripts/bootstrap-select.js",
+                       "~/Scripts/i18n/defaults-pl_PL.js",
+                       "~/Scripts/bootstrap-datepicker.js",
+                       "~/Scripts/locales/bootstrap-datepicker.pl.min.js"
                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/Site.css",
-                      "~/Content/DataTables/dataTables.bootstrap.css"
+                      "~/Content/DataTables/dataTables.bootstrap.css",
+                      "~/Content/bootstrap-select.css",
+                      "~/Content/bootstrap-datepicker.css"
                       ));
         }
     }
