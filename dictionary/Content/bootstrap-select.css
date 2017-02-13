@@ -153,7 +153,7 @@ select.selectpicker {
   position: relative;
 }
 .bootstrap-select.btn-group .dropdown-menu li.active small {
-  color: #fff;
+  color: #3E3E39 ;
 }
 .bootstrap-select.btn-group .dropdown-menu li.disabled a {
   cursor: not-allowed;

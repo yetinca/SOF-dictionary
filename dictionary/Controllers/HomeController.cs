@@ -36,6 +36,18 @@ namespace dictionary.Controllers
                 newModel.EngItem = model.EngItem;
                 newModel.FirstInput = model.FirstInput;
                 newModel.BranchID = model.BranchID;
+                newModel.PolItem = model.PolItem;
+                newModel.LastModification = model.LastModification;
+                newModel.Abbreviation = model.Abbreviation;
+                newModel.TermType = model.TermType;
+                newModel.PolItemDef = model.PolItemDef;
+                newModel.EngItemDef = model.EngItemDef;
+                newModel.Synonyms = model.Synonyms;
+                newModel.Antonyms = model.Antonyms;
+                newModel.TermSuperior = model.TermInferior;
+                newModel.TermAssociated = model.TermAssociated;
+                newModel.FalseFriendPL = model.FalseFriendPL;
+                newModel.FalseFriendANG = model.FalseFriendANG;
 
                 db.Main.Add(newModel);
 

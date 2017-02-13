@@ -1,0 +1,15 @@
+﻿.container #tblMain_wrapper {
+  color: red;
+  background-color: azure;
+}
+.container #tblMain_wrapper #tblMain tr:first-child td {
+  height: 10rem;
+  background-color: #990000;
+}
+.container #tblMain_wrapper #tblMain tr:last-child td {
+  height: 5rem;
+  background-color: red;
+}
+.container #tblMain_wrapper #tblMain tr td {
+  margin: 15px;
+}

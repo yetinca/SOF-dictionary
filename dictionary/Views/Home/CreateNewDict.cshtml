@@ -2,52 +2,54 @@
 
 <h1>Tworzenie nowego hasła</h1>
 
-@using (Html.BeginForm())
+@using(Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
     <div class="container">
         <div class="form-group ">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-3">
-                            @Html.LabelFor(m => m.EngItem)
-                        </div>
-                        <div class="col-md-3">
-                            @Html.TextBoxFor(m => m.EngItem)
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row date">
-                        <div class="col-md-3">
-                            @Html.LabelFor(m => m.FirstInput)
-                        </div>
-                        <div class="col-md-3">
-                            @Html.TextBoxFor(m => m.FirstInput, new { @class = "form-control" })
+                <div class="row top-buffer">
+                    <div class="col-md-6 ">
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                @Html.LabelFor(m => m.EngItem, new { @class = "label-form" })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(m => m.EngItem, new { @class = "form-control" })
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3" align="left" )>
-                    <div class="row date">
-                        <div class="col-md-3">
-                            @Html.LabelFor(m => m.BranchID)
-                        </div>
-                        <div class="col-md-3">
-                            @Html.DropDownListFor(m => m.BranchID, Model.BranchDropDown, new { @class = "selectpicker" })
+                <div class="row top-buffer">
+                    <div class="col-md-6">
+                        <div class="row date">
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => m.FirstInput, new { @class = "label-form" })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.TextBoxFor(m => m.FirstInput, new { @class = "form-control" })
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <p></p>
-                <div class="col-md-4 col-md-offset-11" align="left" )>
-                    <button class="btn" type="submit">Zapisz</button>
+                <div class="row top-buffer">
+                    <div class="col-md-6" align="left" )>
+                        <div class="row">
+                            <div class="col-md-6">
+                                @Html.LabelFor(m => m.BranchID, new { @class = "label-form" })
+                            </div>
+                            <div class="col-md-6">
+                                @Html.DropDownListFor(m => m.BranchID, Model.BranchDropDown, new { @class = "selectpicker form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <p></p>
+                    <div class="col-md-1 col-md-offset-3" align="left" )>
+                        <button class="btn form-control" type="submit">Zapisz</button>
+                    </div>
                 </div>
             </div>
         </div>

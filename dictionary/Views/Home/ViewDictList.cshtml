@@ -6,10 +6,10 @@
 
 
 
-<div class="container">
+<div class="container test">
     <a class="btn" href="/Home/CreateNewDict">Utwórz nowy termin</a>
     <br/>
-    <table id="tblMain" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <table id="tblMain" class="table table-striped table-bordered display" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>ID</th>
@@ -37,9 +37,19 @@
 @section scripts{
     <script>
         $(document).ready(function () {
-            $('#tblMain').DataTable({
+            var table = $('#tblMain').DataTable({
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Polish.json"
+                }
+            });
+
+            $('#tblMain tbody').on('click', 'tr', function () {
+                if ($(this).hasClass('selected')) {
+                    $(this).removeClass('selected');
+                }
+                else {
+                    table.$('tr.selected').removeClass('selected');
+                    $(this).addClass('selected');
                 }
             });
         });

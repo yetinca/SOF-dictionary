@@ -35,7 +35,8 @@ namespace dictionary
                       "~/Content/Site.css",
                       "~/Content/DataTables/dataTables.bootstrap.css",
                       "~/Content/bootstrap-select.css",
-                      "~/Content/bootstrap-datepicker.css"
+                      "~/Content/bootstrap-datepicker.css",
+                      "~/Content/Test.css"
                       ));
         }
     }

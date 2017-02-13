@@ -71,6 +71,12 @@ color: #bababa;
 .table-hover > tbody > tr.active:hover > th {
     background-color: #626262 !important;
 }
+.top-buffer{margin-top: 10px !important;margin-bottom: 20px !important;}
+.label-form {
+    font-family: "Courier new";
+    font-size: 18px;
+
+}
 /* CSS - Cascading Style Sheet */
 /* Palette color codes */
 /* Palette URL: http://paletton.com/#uid=c1V4J3u0F0k2S7Te73P7q2J3gft2Hj- */
