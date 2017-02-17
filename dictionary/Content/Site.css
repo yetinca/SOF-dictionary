@@ -2,15 +2,8 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-@font-face {
-    font-family: 'SilveryTarjey';
-    src: url('../fonts/SilveryTarjey.ttf') format('truetype');
-    src: url('../fonts/SilveryTarjey.ttf') format('opentype');
-}
-@font-face {
-    font-family: 'GOODTIME';
-    src: url('../fonts/GOODTIME.ttf') format('truetype');
-}
+
+
 @font-face {
     font-family: 'avocado_';
     src: url('../fonts/avocado_.ttf') format('truetype');

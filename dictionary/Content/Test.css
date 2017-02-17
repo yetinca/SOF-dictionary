@@ -1,14 +1,21 @@
 ﻿.container #tblMain_wrapper {
-  color: red;
-  background-color: azure;
+  color: #E7E7E7;
+  background-color: #4D4D4D;
+}
+.container #tblMain_wrapper #tblMain #tblMain_paginate {
+  color: #E7E7E7;
+  background-color: #4D4D4D;
+}
+.container #tblMain_wrapper #tblMain tr {
+  background-color: #4D4D4D;
 }
 .container #tblMain_wrapper #tblMain tr:first-child td {
   height: 10rem;
-  background-color: #990000;
+  background-color: #1a1a1a;
 }
 .container #tblMain_wrapper #tblMain tr:last-child td {
   height: 5rem;
-  background-color: red;
+  background-color: #4D4D4D;
 }
 .container #tblMain_wrapper #tblMain tr td {
   margin: 15px;

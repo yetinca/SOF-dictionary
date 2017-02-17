@@ -83,5 +83,22 @@ namespace dictionary.Controllers
             var model = BranchMethod.GetBranch();
             return View(model);
         }
+
+        [HttpPost]
+        public ActionResult GetFile(FileTbModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                FileTb newModel= new FileTb();
+                newModel.ID = model.ID;
+                newModel.FileName = model.FileName;
+                newModel.Path = model.Path;
+                db.FileTb.Add(newModel);
+
+                db.SaveChanges();
+
+            }
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

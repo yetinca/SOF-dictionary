@@ -1,25 +1,32 @@
-﻿@color-td: red;
+﻿@color-td: #4D4D4D;
 
 .container {
     #tblMain_wrapper {
-        color: red;
-        background-color: azure;
+        color: #E7E7E7;
+        background-color: #4D4D4D;
 
         #tblMain {
+            #tblMain_paginate {
+                color: #E7E7E7;
+                background-color: #4D4D4D;
+            }
+
             tr {
+                background-color: #4D4D4D;
+
                 &:first-child td {
                     height: 10rem;
                     background-color: darken(@color-td,20%);
                 }
 
-               &:last-child td{
-                   height: 5rem;
-                   background-color: @color-td;
-               }
+                &:last-child td {
+                    height: 5rem;
+                    background-color: @color-td;
+                }
 
-               td{
-                   margin: 15px;
-               }
+                td {
+                    margin: 15px;
+                }
             }
         }
     }
