@@ -2,6 +2,9 @@
   color: #E7E7E7;
   background-color: #4D4D4D;
 }
+.container #tblMain_wrapper ul li a {
+  background-color: #4D4D4D;
+}
 .container #tblMain_wrapper #tblMain #tblMain_paginate {
   color: #E7E7E7;
   background-color: #4D4D4D;

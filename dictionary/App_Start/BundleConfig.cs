@@ -27,7 +27,8 @@ namespace dictionary
                        "~/Scripts/bootstrap-select.js",
                        "~/Scripts/i18n/defaults-pl_PL.js",
                        "~/Scripts/bootstrap-datepicker.js",
-                       "~/Scripts/locales/bootstrap-datepicker.pl.min.js"
+                       "~/Scripts/locales/bootstrap-datepicker.pl.min.js",
+                       "~/Scripts/ajax/Ajax.js"
                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

@@ -3,6 +3,7 @@ using dictionary.Methods;
 using dictionary.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -19,6 +20,15 @@ namespace dictionary.Controllers
         {
             var model = MainMethod.GetDictionary();
             return View(model);
+        }
+
+        [HttpPost]
+        public JsonResult DeleteDict(int id)
+        {
+            var deleteElement = db.Main.Where(x => x.ID == id).SingleOrDefault();
+            db.Entry(deleteElement).State = EntityState.Deleted;
+
+            return Json(new { data = db.SaveChanges() == 1});
         }
 
         public ActionResult CreateNewDict()
@@ -84,6 +94,8 @@ namespace dictionary.Controllers
             return View(model);
         }
 
+        public ActionResult GetFile() => View();
+
         [HttpPost]
         public ActionResult GetFile(FileTbModel model)
         {
@@ -98,7 +110,7 @@ namespace dictionary.Controllers
                 db.SaveChanges();
 
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(GetFile));
         }
     }
 }

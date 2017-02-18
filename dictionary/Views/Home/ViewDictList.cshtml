@@ -17,17 +17,19 @@
                 <th>POL</th>
                 <th>Dział</th>
                 <th>Część mowy</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
+                <tr id="@item.ID">
                     <td>@item.ID</td>
                     <td>@item.EngItem</td>
                     <td>@item.PolItem</td>
                     <td>@item.Branch</td>
                     <td>@item.PartOfSpeachStr</td>
+                    <td><button id="btn-delete">Usuń</button></td>
                 </tr>
             }
         </tbody>
@@ -36,18 +38,17 @@
 
 @section scripts{
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             var table = $('#tblMain').DataTable({
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Polish.json"
                 }
             });
 
-            $('#tblMain tbody').on('click', 'tr', function () {
+            $('#tblMain tbody').on('click', 'tr', function() {
                 if ($(this).hasClass('selected')) {
                     $(this).removeClass('selected');
-                }
-                else {
+                } else {
                     table.$('tr.selected').removeClass('selected');
                     $(this).addClass('selected');
                 }
