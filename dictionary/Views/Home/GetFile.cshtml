@@ -1,24 +1,25 @@
 ﻿@model dictionary.Models.FileTbModel
 
 
-    @using (Html.BeginForm("GetFile","Home",FormMethod.Post ))
+    @using (Html.BeginForm("GetFile","Home",FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         @Html.AntiForgeryToken()
         <div class="container">
             <div class="form-group">
                 <div class="row">
-                    <div class="col-md-4">
-                        @Html.LabelFor(m => m.FileName)
-                        @Html.TextBoxFor(m => m.FileName, new {@type = "file"})
+                    <div class="col-md-2">
+                        @*@Html.LabelFor(m => m.FileName)*@
+                        <label class="label" for="plik"> Wybierz plik</label>
+                    </div>
+                    <div class="col-md-1">
+                        @*@Html.TextBoxFor(m => m.FileName, new { @type = "file" })*@
+                        <input class="input-md" type="file" name="plikLoad"/>
                     </div>
 
                 </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <button class="btn-default" type="submit"></button>
-                    </div>
+                        <button class="btn btn-default" type="submit" value="upload">Zapisz</button>
                 </div>
             </div>
-        </div>
+
     }
 

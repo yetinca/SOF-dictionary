@@ -1,25 +1,29 @@
-﻿.container #tblMain_wrapper {
+﻿@font-face {
+  font-family: 'avocado_';
+  src: url('../fonts/avocado_.ttf') format('truetype');
+}
+container #tblMain_wrapper {
   color: #E7E7E7;
   background-color: #4D4D4D;
 }
-.container #tblMain_wrapper ul li a {
+container #tblMain_wrapper ul li a {
   background-color: #4D4D4D;
 }
-.container #tblMain_wrapper #tblMain #tblMain_paginate {
+container #tblMain_wrapper #tblMain #tblMain_paginate {
   color: #E7E7E7;
   background-color: #4D4D4D;
 }
-.container #tblMain_wrapper #tblMain tr {
+container #tblMain_wrapper #tblMain tr {
   background-color: #4D4D4D;
 }
-.container #tblMain_wrapper #tblMain tr:first-child td {
+container #tblMain_wrapper #tblMain tr:first-child td {
   height: 10rem;
   background-color: #1a1a1a;
 }
-.container #tblMain_wrapper #tblMain tr:last-child td {
+container #tblMain_wrapper #tblMain tr:last-child td {
   height: 5rem;
   background-color: #4D4D4D;
 }
-.container #tblMain_wrapper #tblMain tr td {
+container #tblMain_wrapper #tblMain tr td {
   margin: 15px;
 }

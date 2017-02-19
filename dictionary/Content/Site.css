@@ -2,7 +2,9 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
+* {
+    font-family: "Courier new" !important;
+}
 
 @font-face {
     font-family: 'avocado_';

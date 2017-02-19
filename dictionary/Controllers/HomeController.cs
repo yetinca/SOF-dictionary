@@ -4,6 +4,7 @@ using dictionary.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -28,7 +29,7 @@ namespace dictionary.Controllers
             var deleteElement = db.Main.Where(x => x.ID == id).SingleOrDefault();
             db.Entry(deleteElement).State = EntityState.Deleted;
 
-            return Json(new { data = db.SaveChanges() == 1});
+            return Json(new { data = db.SaveChanges() == 1 });
         }
 
         public ActionResult CreateNewDict()
@@ -97,19 +98,30 @@ namespace dictionary.Controllers
         public ActionResult GetFile() => View();
 
         [HttpPost]
-        public ActionResult GetFile(FileTbModel model)
+        public ActionResult GetFile(HttpPostedFileBase plikLoad)
         {
-            if(ModelState.IsValid)
+            if (plikLoad != null)
             {
-                FileTb newModel= new FileTb();
-                newModel.ID = model.ID;
-                newModel.FileName = model.FileName;
-                newModel.Path = model.Path;
+            string plik = plikLoad.FileName.Substring(0, plikLoad.FileName.Length - 4);
+            var folder = Server.MapPath("~/App_Data/" + plik);
+
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+                plikLoad.SaveAs(folder + Path.GetFileName(plikLoad.FileName));
+            if (ModelState.IsValid)
+            {
+                FileTb newModel = new FileTb();
+
+                newModel.FileName = plikLoad.FileName.ToString();
+                newModel.Path = folder.Substring(0,45);
+                newModel.ID = 2;
                 db.FileTb.Add(newModel);
 
                 db.SaveChanges();
 
-            }
+            } }
             return RedirectToAction(nameof(GetFile));
         }
     }
