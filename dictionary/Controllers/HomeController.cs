@@ -111,6 +111,7 @@ namespace dictionary.Controllers
                 }
                 plikLoad.SaveAs(folder + Path.GetFileName(plikLoad.FileName));
             if (ModelState.IsValid)
+
             {
                 FileTb newModel = new FileTb();
 
