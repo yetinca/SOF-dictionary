@@ -27,9 +27,10 @@ namespace dictionary.Models
         }
 
         public DbSet<Main> Main { get; set; } // to jest dla konkretnej tabeli
-        public DbSet<Branch> Rodzaj { get; set; }
+        public DbSet<rodzaj> Rodzaj { get; set; }
         public DbSet<PartOfSpeach> PartsOfSpeach { get; set; }
         public DbSet<FileTb> FileTb { get; set; }
+        public DbSet<FileAndBranchDBmodel> FileAndBranch { get; set; }
 
         public static ApplicationDbContext Create()
         {

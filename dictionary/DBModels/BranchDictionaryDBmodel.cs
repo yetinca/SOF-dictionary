@@ -8,11 +8,12 @@ using System.Web;
 namespace dictionary.DBModels
 {
     [Table("rodzaj")]
-    public class Branch
+    public class rodzaj
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         public string branch { get; set; }
+        public virtual ICollection<FileAndBranchDBmodel> FileAndBranch { get; set; }
     }
 }

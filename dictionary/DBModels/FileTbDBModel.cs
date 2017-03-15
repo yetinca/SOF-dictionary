@@ -12,8 +12,9 @@ namespace dictionary.DBModels
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int? ID { get; set; }
+        public int ID { get; set; }
         public string FileName { get; set; }
         public string Path { get; set; }
+        public virtual ICollection<FileAndBranchDBmodel> FileAndBranchDBmodel { get; set; }
     }
 }

@@ -82,6 +82,14 @@ namespace dictionary.Controllers
             return View();
         }
 
+        public ActionResult FileAndBranch()
+        {
+
+            var b =   db.Rodzaj.FirstOrDefault();
+
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

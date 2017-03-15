@@ -230,6 +230,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="DBModels\BranchDictionaryDBmodel.cs" />
+    <Compile Include="DBModels\FileAndBranchDBmodel.cs" />
     <Compile Include="DBModels\FileTbDBModel.cs" />
     <Compile Include="DBModels\MainDictionaryDBmodel.cs" />
     <Compile Include="DBModels\PartsOfSpeachDBModel.cs" />
@@ -241,6 +242,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DictionaryBranchModels.cs" />
     <Compile Include="Models\DictionaryModels.cs" />
+    <Compile Include="Models\FileAndBranch.cs" />
     <Compile Include="Models\FileTbModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -511,6 +513,7 @@
     <Content Include="Views\Home\ViewDictList.cshtml" />
     <Content Include="Views\Home\CreateNewDict.cshtml" />
     <Content Include="Views\Home\GetFile.cshtml" />
+    <Content Include="Views\Home\FileAndBranch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

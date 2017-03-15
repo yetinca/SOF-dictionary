@@ -22,7 +22,7 @@ namespace dictionary.DBModels
         public DateTime? FirstInput { get; set; }
         public string Abbreviation { get; set; }
         public int? BranchID { get; set; }
-        public virtual Branch Branch { get; set; }
+        public virtual rodzaj Branch { get; set; }
         public int? TermType { get; set; }
         public string PolItemDef { get; set; }
         public string EngItemDef { get; set; }
